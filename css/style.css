@@ -67,7 +67,7 @@ ul.nav.navbar li a:focus{
 .w3ls-hover span::before {
 	content: attr(data-letters);
 	position: absolute;
-	color: #000;
+	color: #42a5f5;
 	left: 0;
 	overflow: hidden;
 	white-space: nowrap;
@@ -93,16 +93,22 @@ ul.nav.navbar li a.w3ls-icon:hover {
 	color:#000;
 }
 /*-- //top-nav --*/
+
 /*-- banner --*/  
 .video {
-	background:url(../images/cv.jpg)no-repeat;
+	/*background:url(../images/g5.jpg)no-repeat;*/
+
+    background:url(../images/bg.png)no-repeat;
+    background-color: rgb(0,0,0);
     background-position:0px 0px;
 	text-align: left;
 	min-height: 100%;
 	background-size:cover;
+    position: relative;
+    height: 87.6vmin;
 }
 .banner-text {
-    margin: 22em 0 10em;
+    margin: 35em 10em 10em;
     text-align: center;
     background: rgba(0, 0, 0, 0.72);
     display: inline-block;
@@ -123,12 +129,13 @@ ul.nav.navbar li a.w3ls-icon:hover {
 .video iframe{
 width: 100%;
     min-height: 15em;
+    max
     border: 1px solid #b3b3b3;
 }
 /*-- //banner --*/  
 /*-- modal-basic --*/
 .modal{
-    background: rgba(19, 198, 245, 0.84);
+    background: rgb(142, 160, 164);
 	background-size:cover; 
 	padding: 0 !important; 
 }
