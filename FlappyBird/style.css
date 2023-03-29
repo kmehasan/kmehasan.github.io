@@ -1,0 +1,28 @@
+#gameCanvas {
+	border: 1px solid black;
+	/* background-image: url('https://github.com/samuelcust/flappy-bird-assets/blob/master/sprites/background-day.png'); */
+	/* background-color: aqua; */
+	/* background: url(assets/background.png) center repeat-x; */
+	/* background-size: auto 100%; */
+}
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#gameOver{
+	display: none;
+	border: 2px solid black;
+	background-color: cadetblue;
+	border-radius: 5%;
+	position: fixed;
+    top: 25%;
+    left: 50%;
+	transform: translate(-75px,0px);
+	padding: 10px;
+	align-items: center;
+	/* display: none; */
+}
+#restart{
+	transform: translate(46px,0px);
+	color: #000;
+}
