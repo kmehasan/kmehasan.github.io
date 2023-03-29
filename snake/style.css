@@ -1,0 +1,21 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: black;
+  }
+  
+  canvas {
+    display: block;
+    margin: auto;
+    background-color: black;
+    border: 10px solid white;
+  }
+  
+  #score {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 24px;
+    color: white;
+  }
+  
