@@ -459,9 +459,6 @@ h6 {
 .hero-area .btn-text:hover {
   color: #fff;
 }
-.hero-area .img-fluid {
-  border-radius: 5%;
-}
 /***********************************************************
   6. Intro Section  
 ************************************************************/
@@ -636,7 +633,6 @@ h6 {
 }
 .skill-section .progress-block {
   margin-top: 30px;
-  display: contents;
 }
 .skill-section .progress-block h4 {
   color: #fff;
@@ -650,12 +646,7 @@ h6 {
 }
 .skill-section .progress-wrapper {
   margin-bottom: 24px;
-  padding-right: 24px;
   position: relative;
-}
-.skill-section .progress-wrapper hr{
-  height: 5px;
-  color: white;
 }
 .skill-section .progress {
   height: 0.5rem;
@@ -675,33 +666,6 @@ h6 {
 }
 .progress-bar {
   transition-duration: 3s;
-}
-.skill-bubble-list li{
-  border-radius: 8px;
-  padding: 5px 20px;
-  background-color: #0077b5;
-  display: inline-block;
-  white-space: nowrap;
-  color: white;
-  flex-grow: 1;
-  text-align: center;
-  margin: 5px 5px 5px 5px;
-  justify-content: center;
-}
-.skill-bubble-list{
-  display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	line-height: 1.4em;
-	margin-top: 18px;
-}
-.skill-bubble-list:after {
-	content:"\00a0";
-	width: 1px;
-	height:1px;
-	overflow:hidden;
-	display: inline-block;
-	margin-right:100%;
 }
 /***********************************************************
   9. Portfolio Section
@@ -960,7 +924,6 @@ h6 {
 }
 .service-section .content-wrapper {
   border: 1px solid #474747;
-  height: 100%;
   padding: 60px 48px;
   text-align: center;
   border-radius: 10px;
@@ -996,14 +959,6 @@ h6 {
   left: 5%;
   bottom: -2%;
 }
-.time-frame{
-  color: white;
-  font-weight: bold;
-}
-.time-frame span{
-  color: #b0aac0;
-}
-
 /* Dark Mode Styling */
 .dark-mode .service-section {
   background: #2a2a2a;
@@ -1020,12 +975,6 @@ h6 {
 /***********************************************************
   11. Features Section
 ************************************************************/
-.circuler-image-company{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto;
-}
 .features-section h3 {
   margin-bottom: 48px;
 }
@@ -1083,7 +1032,6 @@ h6 {
   background-size: cover;
   padding-bottom: 107px;
   position: relative;
-  display: none;
   z-index: 1;
 }
 .testimonial-section:after {
@@ -1168,7 +1116,6 @@ h6 {
   13. Blog Section
 ************************************************************/
 .blog-section {
-  display: none;
   padding-bottom: 36px;
   position: relative;
   /* Blog details styling */
@@ -1435,7 +1382,6 @@ h6 {
   14. Partner Section  
 ************************************************************/
 .partner-section {
-  display: none;
   padding-top: 90px;
   padding-bottom: 90px;
   background: #303c46;
@@ -1746,26 +1692,19 @@ h6 {
   .hero-area .image-wrapper img {
     width: 66%;
   }
-  .hero-area .hero-icons li {
+  .hero-area .hero-facts li {
     padding: 16px;
   }
-  .hero-area .hero-icons li:first-child {
-    left: 175px;
-    top: 20px;
+  .hero-area .hero-facts li:first-child {
+    left: 96px;
   }
-  .hero-area .hero-icons li:nth-child(2) {
-    right: -50px;
+  .hero-area .hero-facts li:nth-child(2) {
+    right: -90px;
   }
-  .hero-area .hero-icons li:nth-child(3) {
-    left: 175px;
-  }
-  .hero-area .hero-icons li:nth-child(4) {
-    right: -50px;
-  }
-  .hero-area .hero-icons li p {
+  .hero-area .hero-facts li p {
     font-size: 36px;
   }
-  .hero-area .hero-icons li h4 {
+  .hero-area .hero-facts li h4 {
     font-size: 15px;
   }
   .about-section .img-wrapper:before {
@@ -1886,27 +1825,19 @@ h6 {
   .hero-area .image-wrapper img {
     width: 60%;
   }
-  .hero-area .hero-icons li {
+  .hero-area .hero-facts li {
     padding: 14px 16px;
   }
-  .hero-area .hero-icons li:first-child {
-    left: 140px;
-    top: 36px;
+  .hero-area .hero-facts li:first-child {
+    left: 80px;
   }
-  .hero-area .hero-icons li:nth-child(2) {
-    right: 140px;
+  .hero-area .hero-facts li:nth-child(2) {
+    right: 85px;
   }
-  
-  .hero-area .hero-icons li:nth-child(3) {
-    left: 140px;
-  }
-  .hero-area .hero-icons li:nth-child(4) {
-    right: 140px;
-  }
-  .hero-area .hero-icons li h4 {
+  .hero-area .hero-facts li h4 {
     font-size: 14px;
   }
-  .hero-area .hero-icons li p {
+  .hero-area .hero-facts li p {
     font-size: 36px;
   }
   .hero-area .de-hero-4 {
@@ -1952,9 +1883,6 @@ h6 {
   }
   .features-section .image-wrapper {
     text-align: center;
-  }
-  .feature-photo-2 {
-    display: none;
   }
   .features-section .image-wrapper img {
     width: 60%;
@@ -2044,18 +1972,13 @@ h6 {
   .hero-area .hero-social a {
     font-size: 21px;
   }
-  .hero-area .hero-icons li:first-child {
+  .hero-area .hero-facts li:first-child {
     left: 18px;
     top: 33px;
   }
-  .hero-area .hero-icons li:nth-child(2) {
+  .hero-area .hero-facts li:nth-child(2) {
     right: 0;
-  }
-  .hero-area .hero-icons li:nth-child(3) {
-    left: 0;
-  }
-  .hero-area .hero-icons li:nth-child(4) {
-    right: 0;
+    bottom: 48px;
   }
   .hero-area .image-wrapper:after {
     width: 430px;
@@ -2253,7 +2176,7 @@ h6 {
   .hero-area .content-block {
     margin-bottom: 96px;
   }
-  .hero-area .hero-icons {
+  .hero-area .hero-facts {
     display: none;
   }
   .hero-area .link-group {
