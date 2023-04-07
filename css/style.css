@@ -550,7 +550,7 @@ h6 {
 .about-section .about-img-2 {
   position: absolute;
   left: 0;
-  bottom: -200px;
+  bottom: -150px;
 }
 .about-section .content-block h2 {
   font-size: 48px;
@@ -637,6 +637,7 @@ h6 {
 .skill-section .progress-block {
   margin-top: 30px;
   display: contents;
+  text-align: center;
 }
 .skill-section .progress-block h4 {
   color: #fff;
@@ -644,12 +645,10 @@ h6 {
   margin-bottom: 12px;
 }
 .bullet-point {
-  width: 24px;
-  filter: invert(100%);
-  content: url('/image/icon/arrow.png');
+  text-align: center;
 }
 .skill-section .progress-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 100px;
   padding-right: 24px;
   position: relative;
 }
@@ -676,22 +675,30 @@ h6 {
 .progress-bar {
   transition-duration: 3s;
 }
-.skill-bubble-list li{
-  border-radius: 8px;
-  padding: 5px 20px;
-  background-color: #0077b5;
+.skill-bubble-list li img{
+  width: 72px;
+  height: 72px;
+  padding: 5%;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #FFFFFF;
   display: inline-block;
   white-space: nowrap;
-  color: white;
+  color: black;
   flex-grow: 1;
   text-align: center;
-  margin: 5px 5px 5px 5px;
+  margin: 10px;
   justify-content: center;
 }
+/* .skill-bubble-list li img{
+  width: 108px;
+  margin: 0 auto;
+  display: block;
+} */
 .skill-bubble-list{
   display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+  justify-content: center;
 	line-height: 1.4em;
 	margin-top: 18px;
 }
