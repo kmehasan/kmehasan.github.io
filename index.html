@@ -230,7 +230,7 @@
 				<div class="col-xl-6 content-block" data-aos="fade-right" data-aos-delay="400" data-aos-duration="2000">
 					<h2><span>About Me</span>I Develop Android Apps</h2>
 					<p align="justify">
-						I'm an experienced Android developer with over 5.5 years of industry experience. I'm proficient
+						I'm an experienced Android developer with over <span class="experienceText">5.5</span> years of industry experience. I'm proficient
 						in programming languages such as Java, Kotlin and python, and I possess a strong knowledge of
 						the Android SDK, Android Studio, and Android Architecture Components.
 					</p>
@@ -264,7 +264,7 @@
 							<ul class="personal-info">
 								<li>
 									<h4>Age</h4>
-									<p>27 Years</p>
+									<p id="ageText">27 Years</p>
 								</li>
 								<li>
 									<h4>Education</h4>
@@ -1252,11 +1252,24 @@
 					</div> <!-- .image-wrapper -->
 				</div> <!-- .image-block -->
 				<div class="col-xl-8 content-block" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">
-					<h3 class="block-title"><span>Experience</span>5 Years of Experience</h3>
+					<h3 class="block-title"><span>Experience</span><strong class="experienceText">5</strong> Years of Experience</h3>
 					<p>
 						Experience is not just what you gain, but how you apply it.
 					</p>
-					<ul class="features-list">
+					<ul class="features-list" id="jobList">
+						<li class="d-flex align-items-start">
+							<div class="icon-block">
+								<!-- <div class="icon-box"><i class="pe-7s-umbrella"></i></div> -->
+								<img class="circuler-image-company" src="./image/company/ssl.jpg" alt="SSL Wireless Logo" />
+							</div>
+							<div class="content-wrapper">
+								<h4>SSL Wireless</h4>
+								<span class="time-frame">Senior Software Specialist <span>May 2023 - Continuing</span></span>
+								<p>
+									Android app development, Analysis SRS/BRD received from Project Management Team or Business team, Identify Project Challenges, database management, Deployment, R&D.
+								</p>
+							</div>
+						</li>
 						<li class="d-flex align-items-start">
 							<div class="icon-block">
 								<!-- <div class="icon-box"><i class="pe-7s-umbrella"></i></div> -->
@@ -1264,7 +1277,7 @@
 							</div>
 							<div class="content-wrapper">
 								<h4>Aventra Consultant LTD</h4>
-								<span class="time-frame">Software Engineer <span>Oct 2021 - Continuing</span></span>
+								<span class="time-frame">Software Engineer <span>Oct 2021 - April 2023</span></span>
 								<p>
 									Android app development, Conduct android team, database management, Deployment,
 									Problem solving, R&D.

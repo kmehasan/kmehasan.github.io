@@ -1629,9 +1629,10 @@ h6 {
   transform: translateY(-5px);
 }
 .site-footer .back-to-top {
-  position: absolute;
-  top: -120px;
-  right: var(--bs-gutter-x, 0.75rem);
+  position: fixed;
+  /* top: -120px; */
+  bottom: var(--bs-gutter-y, 1.75rem);
+  right: var(--bs-gutter-x, 1.75rem);
 }
 .site-footer .back-to-top a {
   width: 60px;

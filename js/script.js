@@ -162,6 +162,50 @@ $(document).ready(function () {
 
 
 /*================================================================= 
+    Age calculator
+==================================================================*/
+$(document).ready(function () {
+
+  // age text where id = ageText
+  var ageText = $('#ageText');
+  // var ageText = $('.ageText');
+  var dob = new Date("1996-04-28");
+  var today = new Date();
+  var age = today.getFullYear() - dob.getFullYear();
+  ageText.text(age+' years');
+});
+
+/*================================================================= 
+    experiance calculator
+==================================================================*/
+$(document).ready(function () {
+
+  var expText = $('.experienceText');
+  var jobList = document.querySelectorAll('#jobList li');
+  var exp = 0;
+  jobList.forEach(function(job) {
+    var time_frame = job.querySelector('.time-frame span').innerText.split(' - ');
+    console.log(time_frame);
+    if(time_frame.length != 0){
+      time_frame[0] = new Date(time_frame[0]);
+      if(time_frame.length == 2){
+        if(time_frame[1] == 'Continuing'){
+          time_frame[1] = new Date();
+        }else{
+          time_frame[1] = new Date(time_frame[1]);
+        }
+      }else{
+        time_frame.push(new Date());
+      }
+      var jobExp = time_frame[1].getFullYear() - time_frame[0].getFullYear();
+      exp += jobExp;
+    }
+  });
+  expText.text(exp);
+});
+
+
+/*================================================================= 
     Contact form 
 ==================================================================*/
 $(function() {
