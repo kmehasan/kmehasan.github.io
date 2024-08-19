@@ -1046,7 +1046,18 @@ h6 {
   font-size: 70%;
   float: right;
 }
+.education-section h4 span {
+  font-family: 'Open Sans', sans-serif;
+  color: #615978;
+  font-size: 70%;
+  float: right;
+}
 .features-section h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.education-section h5 {
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 18px;
@@ -1054,20 +1065,39 @@ h6 {
 .features-section .content-block {
   padding-left: 120px;
 }
+.education-section .content-block {
+  padding-left: 120px;
+}
 .features-section .features-list {
+  margin-top: 36px;
+  margin-bottom: 0;
+}
+.education-section .features-list {
   margin-top: 36px;
   margin-bottom: 0;
 }
 .features-section li {
   margin-bottom: 36px;
 }
+.education-section li {
+  margin-bottom: 36px;
+}
 .features-section li:last-child {
+  margin-bottom: 0;
+}
+.education-section li:last-child {
   margin-bottom: 0;
 }
 .features-section li:last-child .icon-box:after {
   content: none;
 }
+.education-section li:last-child .icon-box:after {
+  content: none;
+}
 .features-section .icon-block {
+  margin-right: 24px;
+}
+.education-section .icon-block {
   margin-right: 24px;
 }
 .features-section .icon-box {

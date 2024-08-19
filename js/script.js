@@ -122,7 +122,7 @@ const swiper2 = new Swiper('.partnerCarousel', {
 /*================================================================= 
     Map
 ==================================================================*/
-var map = L.map('mapwrapper').setView([23.75, 90.4], 11);
+var map = L.map('mapwrapper').setView([23.779063146672023, 90.35645306370449], 12);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -134,7 +134,7 @@ var greenIcon = L.icon({
     iconSize:     [36, 48], // size of the icon
 });
 
-L.marker([23.7615,90.3900], {icon: greenIcon}).addTo(map);
+L.marker([23.779063146672023, 90.35645306370449], {icon: greenIcon}).addTo(map);
 
 
 
