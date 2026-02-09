@@ -184,36 +184,40 @@ $(document).ready(function () {
   var totalMilliseconds = 0;
 
   jobList.forEach(function(job) {
-    var time_frame = job.querySelector('.time-frame span').innerText.split(' - ');
-    
+    var time_frame_text = job.querySelector('.time-frame span').innerText;
+    var time_frame = time_frame_text.split(' - ');
+
     if(time_frame.length != 0){
-      // Parse Start Date
       var startDate = new Date(time_frame[0]);
       var endDate;
 
-      // Parse End Date
       if(time_frame.length == 2){
-        if(time_frame[1].trim() === 'Continuing' || time_frame[1].trim() === 'Present'){
-          endDate = new Date();
+        var endText = time_frame[1].trim();
+        if(endText === 'Continuing' || endText === 'Present'){
+          endDate = new Date(); // Today
         } else {
-          endDate = new Date(time_frame[1]);
+          // Fix: Parse the end date and add 1 month to include the full final month
+          endDate = new Date(endText);
+          endDate.setMonth(endDate.getMonth() + 1); 
         }
       } else {
         endDate = new Date();
       }
 
-      // Calculate difference in milliseconds
+      // Calculate difference
       var difference = endDate - startDate;
-      totalMilliseconds += difference;
+      if (difference > 0) {
+          totalMilliseconds += difference;
+      }
     }
   });
 
-  // Convert total milliseconds to years (including leap years, approx)
-  // 1000 ms * 60 s * 60 m * 24 h * 365.25 days
+  // Convert to years
   var totalYears = totalMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
-
-  // Show 1 decimal place (e.g., "8.3 Years") or Math.round for integer
-  expText.text(totalYears.toFixed(1) + " Years"); 
+  
+  // Round to 1 decimal place. 
+  // If you prefer just "8 Years", use Math.round(totalYears)
+  expText.text(totalYears.toFixed(1)); 
 });
 
 
