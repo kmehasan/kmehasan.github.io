@@ -176,32 +176,44 @@ $(document).ready(function () {
 });
 
 /*================================================================= 
-    experiance calculator
+    experience calculator
 ==================================================================*/
 $(document).ready(function () {
-
   var expText = $('.experienceText');
   var jobList = document.querySelectorAll('#jobList li');
-  var exp = 0;
+  var totalMilliseconds = 0;
+
   jobList.forEach(function(job) {
     var time_frame = job.querySelector('.time-frame span').innerText.split(' - ');
-    console.log(time_frame);
+    
     if(time_frame.length != 0){
-      time_frame[0] = new Date(time_frame[0]);
+      // Parse Start Date
+      var startDate = new Date(time_frame[0]);
+      var endDate;
+
+      // Parse End Date
       if(time_frame.length == 2){
-        if(time_frame[1] == 'Continuing'){
-          time_frame[1] = new Date();
-        }else{
-          time_frame[1] = new Date(time_frame[1]);
+        if(time_frame[1].trim() === 'Continuing' || time_frame[1].trim() === 'Present'){
+          endDate = new Date();
+        } else {
+          endDate = new Date(time_frame[1]);
         }
-      }else{
-        time_frame.push(new Date());
+      } else {
+        endDate = new Date();
       }
-      var jobExp = time_frame[1].getFullYear() - time_frame[0].getFullYear();
-      exp += jobExp;
+
+      // Calculate difference in milliseconds
+      var difference = endDate - startDate;
+      totalMilliseconds += difference;
     }
   });
-  expText.text(exp);
+
+  // Convert total milliseconds to years (including leap years, approx)
+  // 1000 ms * 60 s * 60 m * 24 h * 365.25 days
+  var totalYears = totalMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+
+  // Show 1 decimal place (e.g., "8.3 Years") or Math.round for integer
+  expText.text(totalYears.toFixed(1) + " Years"); 
 });
 
 
