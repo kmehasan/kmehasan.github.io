@@ -313,6 +313,25 @@ var waypoint = new Waypoint({
   offset: 700,
 })
 
+/*================================================================= 
+    Skill tooltip labels
+==================================================================*/
+$(function() {
+  $('#skill-section .skill-bubble-list li').each(function() {
+    var icon = $(this).find('img').first();
+    var skillName = (icon.attr('alt') || '').trim();
+
+    if (!skillName) {
+      return;
+    }
+
+    $(this).attr('data-skill', skillName);
+    if (!$(this).attr('title')) {
+      $(this).attr('title', skillName);
+    }
+  });
+});
+
 
 /*================================================================= 
     Animate on scroll initialization

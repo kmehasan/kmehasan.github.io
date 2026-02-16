@@ -1,0 +1,13 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="easyeda_bg" x1="12" y1="12" x2="84" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A172D"/>
+      <stop offset="1" stop-color="#4D1F57"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="84" height="84" rx="20" fill="url(#easyeda_bg)"/>
+  <rect x="6" y="6" width="84" height="84" rx="20" stroke="#F472B6" stroke-opacity="0.68" stroke-width="2"/>
+  <path d="M30 31H66V39H30V31ZM30 44H52V52H30V44ZM30 57H66V65H30V57Z" fill="#F9A8D4"/>
+  <circle cx="58.5" cy="48.5" r="8.5" fill="#F472B6"/>
+  <path d="M58.5 44V53M54 48.5H63" stroke="#2F0F35" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
