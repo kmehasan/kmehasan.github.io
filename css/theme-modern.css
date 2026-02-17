@@ -794,6 +794,232 @@ a:hover {
   background: linear-gradient(180deg, #0b1325 0%, #0d182f 100%);
 }
 
+#features-section {
+  background:
+    radial-gradient(980px 360px at 12% -8%, rgba(0, 212, 255, 0.14), transparent 62%),
+    radial-gradient(860px 320px at 88% -4%, rgba(99, 236, 255, 0.09), transparent 64%),
+    linear-gradient(180deg, #071328 0%, #0a1933 100%);
+  overflow: hidden;
+}
+
+#features-section .container {
+  position: relative;
+}
+
+#features-section .experience-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#features-section .experience-kicker {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--theme-accent);
+  margin-bottom: 8px;
+}
+
+#features-section .experience-header .block-title {
+  margin-bottom: 12px;
+  color: #ecf6ff;
+  line-height: 1.15;
+  font-size: clamp(2rem, 4.2vw, 3.35rem);
+}
+
+#features-section .experience-header .block-title strong {
+  color: #8af5ff;
+  text-shadow: 0 0 22px rgba(0, 212, 255, 0.42);
+}
+
+#features-section .experience-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #b7caea;
+}
+
+#features-section .experience-cards {
+  margin: 52px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  overflow: visible;
+  position: relative;
+  align-items: stretch;
+}
+
+#features-section .experience-cards::before {
+  content: none;
+}
+
+#features-section .experience-cards::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#features-section .experience-cards::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(126, 232, 255, 0.58);
+}
+
+#features-section .experience-cards::-webkit-scrollbar-track {
+  background: rgba(9, 20, 41, 0.58);
+  border-radius: 999px;
+}
+
+#features-section .experience-card {
+  margin: 0;
+  list-style: none;
+  position: relative;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#features-section .experience-card::before {
+  content: none;
+}
+
+#features-section .timeline-meta {
+  position: relative;
+  max-width: 100%;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+#features-section .timeline-meta::before,
+#features-section .timeline-meta::after {
+  content: none;
+}
+
+#features-section .timeline-meta h5 {
+  margin: 0;
+  font-size: 0.96rem;
+  color: #d8ecff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+#features-section .timeline-meta span {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.85rem;
+  color: #9eb6dd;
+}
+
+#features-section .experience-card-inner {
+  height: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(150, 177, 221, 0.36);
+  background: linear-gradient(165deg, rgba(15, 26, 47, 0.95), rgba(11, 20, 37, 0.9));
+  box-shadow: 0 20px 42px rgba(2, 8, 20, 0.38);
+  padding: 20px 20px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease;
+}
+
+#features-section .experience-card-inner::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 94px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(123, 240, 255, 0), rgba(123, 240, 255, 0.92), rgba(190, 118, 255, 0));
+  pointer-events: none;
+}
+
+#features-section .experience-card:hover .experience-card-inner {
+  transform: translateY(-7px);
+  border-color: rgba(123, 240, 255, 0.6);
+  box-shadow: 0 30px 54px rgba(2, 8, 20, 0.48);
+}
+
+#features-section .experience-card .icon-block {
+  margin-right: 0;
+}
+
+#features-section .experience-card .circuler-image-company {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  border: 1px solid rgba(120, 238, 255, 0.38);
+  background: rgba(7, 17, 33, 0.82);
+  padding: 6px;
+  object-fit: contain;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.26);
+}
+
+#features-section .experience-card .content-wrapper {
+  padding: 14px 0 0;
+  height: 100%;
+}
+
+#features-section .experience-card h4 {
+  margin-bottom: 8px;
+  font-size: 1.35rem;
+  color: #f4f9ff;
+}
+
+#features-section .experience-card .time-frame {
+  display: block;
+  margin-bottom: 12px;
+  color: #d5e5ff;
+  font-weight: 700;
+  font-size: 0.93rem;
+}
+
+#features-section .experience-card .time-frame span {
+  margin-top: 4px;
+  display: block;
+  color: #9fb6dd;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+#features-section .experience-card .time-frame .job-date-row {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+#features-section .experience-card .time-frame .job-date {
+  margin-top: 0;
+  display: inline-flex;
+  color: #9fb6dd;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+#features-section .experience-card .time-frame .job-duration {
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(123, 240, 255, 0.42);
+  background: rgba(10, 30, 54, 0.65);
+  color: #89eeff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+#features-section .experience-card p {
+  margin: 0;
+  color: #c3d5f1;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
 .features-section h4 span,
 .education-section h4 span {
   color: #9eb1d0;
@@ -935,6 +1161,15 @@ a:hover {
   .skill-section .progress-block {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  #features-section .experience-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  #features-section .experience-card {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -975,6 +1210,32 @@ a:hover {
   .portfolio-section .modal-body img,
   .portfolio-modal-root .modal-body img {
     max-height: 52vh;
+  }
+
+  #features-section .experience-header .block-title {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  #features-section .experience-cards {
+    margin-top: 46px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  #features-section .experience-card {
+    margin-top: 0;
+  }
+
+  #features-section .timeline-meta {
+    padding-left: 0;
+  }
+
+  #features-section .experience-card h4 {
+    font-size: 1.22rem;
+  }
+
+  #features-section .experience-card .time-frame .job-duration {
+    font-size: 0.68rem;
   }
 
   .skill-section .progress-block {

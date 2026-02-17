@@ -180,15 +180,28 @@ $(document).ready(function () {
 ==================================================================*/
 $(document).ready(function () {
   var expText = $('.experienceText');
-  var jobList = document.querySelectorAll('#jobList li');
+  var jobList = document.querySelectorAll('#jobList > li');
   var totalMilliseconds = 0;
+  var yearInMs = 1000 * 60 * 60 * 24 * 365.25;
 
   jobList.forEach(function(job) {
-    var time_frame_text = job.querySelector('.time-frame span').innerText;
+    var timeFrame = job.querySelector('.time-frame');
+    if (!timeFrame) {
+      return;
+    }
+
+    var timeRange = timeFrame.querySelector('.job-date') || timeFrame.querySelector('span');
+    if (!timeRange) {
+      return;
+    }
+    var time_frame_text = timeRange.innerText.trim();
     var time_frame = time_frame_text.split(' - ');
 
     if(time_frame.length != 0){
       var startDate = new Date(time_frame[0]);
+      if (Number.isNaN(startDate.getTime())) {
+        return;
+      }
       var endDate;
 
       if(time_frame.length == 2){
@@ -198,6 +211,9 @@ $(document).ready(function () {
         } else {
           // Fix: Parse the end date and add 1 month to include the full final month
           endDate = new Date(endText);
+          if (Number.isNaN(endDate.getTime())) {
+            return;
+          }
           endDate.setMonth(endDate.getMonth() + 1); 
         }
       } else {
@@ -207,13 +223,34 @@ $(document).ready(function () {
       // Calculate difference
       var difference = endDate - startDate;
       if (difference > 0) {
-          totalMilliseconds += difference;
+        totalMilliseconds += difference;
+
+        // Show per-role duration beside date range
+        var roleYears = difference / yearInMs;
+        var dateRow = timeFrame.querySelector('.job-date-row');
+        if (!dateRow) {
+          dateRow = document.createElement('span');
+          dateRow.className = 'job-date-row';
+          timeRange.classList.add('job-date');
+          timeFrame.insertBefore(dateRow, timeRange);
+          dateRow.appendChild(timeRange);
+        } else {
+          timeRange.classList.add('job-date');
+        }
+
+        var roleDuration = dateRow.querySelector('.job-duration');
+        if (!roleDuration) {
+          roleDuration = document.createElement('span');
+          roleDuration.className = 'job-duration';
+          dateRow.appendChild(roleDuration);
+        }
+        roleDuration.textContent = roleYears.toFixed(1) + ' yrs';
       }
     }
   });
 
   // Convert to years
-  var totalYears = totalMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+  var totalYears = totalMilliseconds / yearInMs;
   
   // Round to 1 decimal place. 
   // If you prefer just "8 Years", use Math.round(totalYears)
