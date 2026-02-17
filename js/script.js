@@ -332,6 +332,40 @@ $(function() {
   });
 });
 
+/*================================================================= 
+    Portfolio modal trigger fix
+==================================================================*/
+$(function() {
+  // Move portfolio modals to <body> so they are never clipped by card containers.
+  $('.portfolio-section .modal').each(function() {
+    $(this).addClass('portfolio-modal-root');
+    if (this.parentNode !== document.body) {
+      document.body.appendChild(this);
+    }
+  });
+
+  $('.portfolio-section .icon-box a[data-bs-toggle="modal"]').on('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    var modalSelector = $(this).attr('data-bs-target');
+    if (!modalSelector) {
+      return;
+    }
+
+    var modalElement = document.querySelector(modalSelector);
+    if (!modalElement) {
+      return;
+    }
+
+    if (typeof bootstrap === 'undefined' || !bootstrap.Modal) {
+      return;
+    }
+
+    bootstrap.Modal.getOrCreateInstance(modalElement).show();
+  });
+});
+
 
 /*================================================================= 
     Animate on scroll initialization
