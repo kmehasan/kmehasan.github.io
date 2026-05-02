@@ -1452,3 +1452,69 @@ a:hover {
   .pub-body { padding: 16px 18px; }
   .pub-title { font-size: 0.92rem; }
 }
+
+/* ================================================
+   PUBLICATIONS EXPANDABLE
+   ================================================ */
+
+#pub-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pub-extra-collapsed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.4s ease;
+  opacity: 0;
+}
+
+.pub-extra-expanded {
+  max-height: 4000px;
+  overflow: visible;
+  opacity: 1;
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.4s ease 0.05s;
+}
+
+.pub-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.pub-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid rgba(0, 212, 255, 0.4);
+  color: var(--theme-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease,
+              transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.pub-toggle-btn:hover {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: var(--theme-accent);
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.pub-toggle-btn i {
+  font-size: 1rem;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pub-toggle-btn.is-open i {
+  transform: rotate(180deg);
+}

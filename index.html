@@ -1429,6 +1429,9 @@
 					</div>
 				</div>
 
+				<!-- Publications 4-7 collapsible -->
+				<div id="pub-extra" class="pub-extra-collapsed">
+
 				<!-- Publication 4 -->
 				<div class="pub-card">
 					<div class="pub-year">2022</div>
@@ -1531,7 +1534,17 @@
 					</div>
 				</div>
 
-			</div><!-- .publications-list -->
+			
+				</div><!-- #pub-extra -->
+
+				<div class="pub-toggle-wrap" data-aos="fade-up">
+					<button id="pub-toggle-btn" class="pub-toggle-btn" onclick="togglePublications()">
+						<span id="pub-toggle-label">Show More Publications</span>
+						<i id="pub-toggle-icon" class="bi bi-chevron-down"></i>
+					</button>
+				</div>
+
+				</div><!-- .publications-list -->
 		</div><!-- .container -->
 	</section><!-- .publications-section -->
 
@@ -2757,6 +2770,27 @@
 	<script src="js/vanilla-tilt.min.js"></script>
 	<script src="js/textition.js"></script>
 	<script src="js/script.js?v=20260217d"></script>
+	<script>
+		function togglePublications() {
+			var extraDiv = document.getElementById('pub-extra');
+			var toggleBtn = document.getElementById('pub-toggle-btn');
+			var toggleLabel = document.getElementById('pub-toggle-label');
+
+			if (extraDiv.classList.contains('pub-extra-collapsed')) {
+				extraDiv.classList.remove('pub-extra-collapsed');
+				extraDiv.classList.add('pub-extra-expanded');
+				toggleBtn.classList.add('is-open');
+				toggleLabel.textContent = 'Show Less';
+			} else {
+				extraDiv.classList.remove('pub-extra-expanded');
+				extraDiv.classList.add('pub-extra-collapsed');
+				toggleBtn.classList.remove('is-open');
+				toggleLabel.textContent = 'Show More Publications';
+				// Optional: Scroll back up slightly if the section gets too long to track
+				document.querySelector('.publications-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}
+	</script>
 </body>
 
 
